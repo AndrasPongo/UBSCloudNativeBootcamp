@@ -18,5 +18,20 @@ pipeline {
 				bat 'mvn clean package'
             }
         }
+        stage('Release to Dev') {
+            steps {
+        		echo "release to dev"
+            }
+        }
+        stage('Release to Staging') {
+            steps {
+                echo "release to staging"
+            }
+        }
+        stage('Release to Prod') {
+            steps {
+                echo "cf push"
+            }
+        }
     }
 }
