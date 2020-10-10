@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build with unit testing') {
             steps {
-				bat 'mvn clean package'
+				bat 'mvn deploy'
             }
         }
     }
